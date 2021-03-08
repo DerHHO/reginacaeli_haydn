@@ -3,7 +3,7 @@
 
 #(set! paper-alist (cons '("Marschbuch" . (cons (* 148.5 mm) (* 120 mm)) ) paper-alist))
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 19)
 #(set-default-paper-size "a4")
 
 \include "../Noten/ReginaCaeliHaydn_Noten.ly"
@@ -45,9 +45,20 @@ tempTranspose = #(define-music-function (parser location music)
 }
 
 \book {
-  \paper {
-    
-  }
+  \paper {  
+    	indent = 0\cm
+	short-indent = 0\cm
+
+    ragged-right = ##f
+    ragged-last-bottom = ##f
+    left-margin = 1\cm
+right-margin = 1\cm
+first-page-number = 2
+#(include-special-characters)
+#(define page-breaking ly:page-turn-breaking)
+
+	
+}
   
   \bookOutputName "Violine_2"
   \header {
@@ -71,9 +82,9 @@ tempTranspose = #(define-music-function (parser location music)
     }
     \new Voice = "vVioline_2" {
       %{<Emergency_Section>%}
-	
-      %{</Emergency_Section>%}
-      \compressFullBarRests
+
+%{</Emergency_Section>%}
+      \compressEmptyMeasures
       \clef "treble"
       \optionalTranspose { \transpose c c \violineIINotenReginaCaeliHaydn }
     }

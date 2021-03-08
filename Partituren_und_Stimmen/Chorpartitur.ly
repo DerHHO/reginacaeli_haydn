@@ -61,11 +61,18 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \chorpartiturReginaCaeliHaydn 
   }
 }
-  \paper {
+  \paper {  
     
-  }
+    ragged-right = ##f
+    ragged-last-bottom = ##f
+    left-margin = 1.3\cm
+right-margin = 1\cm
+#(include-special-characters)
+
+	
+}
 }

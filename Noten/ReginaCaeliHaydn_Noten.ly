@@ -21,6 +21,10 @@ tempTranspose = #(define-music-function (parser location music)
 mBreak = {  }
 mPageBreak = { }
 
+ablaufzeileReginaCaeliHaydn = {
+  
+}
+
 globalReginaCaeliHaydn = {
   \taktstil
   \tempo "Allegro"
@@ -214,7 +218,7 @@ violineINotenReginaCaeliHaydn = \tempTranspose \relative c' {
   d16 [ d16 f16 f16 ] bes16 [ bes16 d16 d16 ] f16 [ f16 as16 as16 ]
   \mBreak | % 136
   g8. [ es16 ] f,4 d'4 | % 137
-  es,4 r4 r4
+	es,4 r4 r4 \tag #'einzelstimme { \pageTurn }
 
   \globalPrestoIReginaCaeliHaydn
   bes'4. \p c8 | % 139
@@ -427,6 +431,7 @@ violineINotenReginaCaeliHaydn = \tempTranspose \relative c' {
   a'16 ) ] | % 297
   <d, bes'>2 r2 ^\fermata \bar "||"
   \globalPrestoIIReginaCaeliHaydn
+	\tag #'einzelstimme { \pageTurn }
   es'4  \f es8 | % 299
   es4 ( bes8 ) | \barNumberCheck #300
   es,8 \p [ f8 g8 ] | % 301
@@ -690,6 +695,7 @@ violineIINotenReginaCaeliHaydn = \tempTranspose \relative c' {
   \mBreak | % 136
   es8. [ g,16 ] f4 d'4 | % 137
   es,4 r4 r4
+	\tag #'einzelstimme { \pageTurn }
   \globalPrestoIReginaCaeliHaydn
   bes'4. \p a8 | % 139
   bes4. c8 | \barNumberCheck #140
@@ -890,6 +896,7 @@ violineIINotenReginaCaeliHaydn = \tempTranspose \relative c' {
   ] bes16 [ f16 d16 bes'16 ] \mPageBreak | % 296
   ges8 [ ges8 ges8 ges8 ] f2 | % 297
   <f bes>2 r2 ^\fermata
+	\tag #'einzelstimme { \pageTurn }
   \globalPrestoIIReginaCaeliHaydn
   g4 \f g8 | % 299
   g4 g8 | \barNumberCheck #300
@@ -1731,58 +1738,29 @@ sopranNotenReginaCaeliHaydn = \tempTranspose \relative c' {
 }
 
 sopranTextReginaCaeliHaydn = \lyricmode {
-  Re -- gi -- na coe -- li lae -- ta -- "re,"
-  lae -- ta -- \skip4 \skip4 "re," lae -- ta -- "re,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," re -- gi -- "na," re -- gi -- na coe -- li lae -- ta -- \skip4
-  \skip4 \skip4 \skip4 \skip4 "re," al -- le -- lu -- "ja," al -- le
-  -- lu -- "ja," \skip4 \skip4 \skip4 al -- le -- lu -- "ja," \skip4
-  \skip4 \skip4 al -- le -- lu -- "ja," al -- le -- lu -- "ja." Qui --
-  a quem me -- ru -- is -- ti por -- ta -- \skip4 "re," por -- ta --
-  \skip4 \skip4 \skip4 \skip4 "re," por -- ta -- \skip4 \skip4 \skip4
-  \skip4 "re," al -- le -- lu -- "ja," \skip4 \skip4 \skip4 \skip4
-  \skip4 \skip4 \skip4 al -- le -- lu -- "ja," \skip4 \skip4 \skip4
-  \skip4 \skip4 \skip4 al -- le -- lu -- \skip4 "ja," qui -- a quem me
-  -- ru -- is -- ti por -- ta -- "re," por -- ta -- \skip4 \skip4
-  "re," por -- ta -- "re," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," qui -- a quem
-  me -- ru -- is -- "ti," me -- ru -- is -- ti por -- ta -- "re," quem
-  me -- ru -- os -- ti por -- ta -- \skip4 \skip4 \skip4 \skip4 \skip4
-  \skip4 "re," al -- le -- lu -- "ja," al -- le -- lu -- "ja," \skip4
-  \skip4 \skip4 al -- le -- lu -- "ja," \skip4 \skip4 \skip4 al -- le
-  -- lu -- "ja," al -- le -- lu -- "ja." Re -- sur -- re -- xit si --
-  cut di -- "xit," si -- cut di -- "xit," al -- le -- lu -- "ja," re
-  -- sur -- re -- xit si -- cut di -- "xit," si -- cut di -- "xit," al
-  -- le -- lu -- "ja," al -- le -- lu -- "ja," a -- le -- lu -- "ja,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu
-  -- "ja," al -- le -- lu -- "ja," si -- cut di -- "xit," al -- le --
-  lu -- "ja," re -- sur -- re -- xit si -- cut di -- "xit," si -- cut
-  di -- "xit," al -- le -- lu -- "ja," al -- \skip4 \skip4 \skip4
-  \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-  \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 le -- lu -- "ja,"
-  re -- sur -- re -- xit si -- cut di -- "xit," si -- cut di -- "xit,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu
-  -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le --
-  lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja." O -- ra
-  pro no -- "bis," pro no -- "bis," De -- um o -- "ra," o -- ra pro no
-  -- "bis," pro no -- bis De -- "um," o -- ra pro no -- bis De --
-  "um," o -- ra pro no -- bis De -- "um," o -- ra pro no -- bis De --
-  um o -- ra pro no -- "bis," De -- "um," o -- \skip4 ra pro no -- bis
-  De -- "um." Al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le
-  -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al --
-  le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al
-  -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu
-  -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le --
-  lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le
-  -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al --
-  le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al
-  -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja."
+  Re -- gi -- na coe -- li læ -- ta -- re,
+  læ -- ta -- _ _ re, læ -- ta -- re,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, re -- gi -- na, re -- gi -- na coe -- li læ -- ta -- _
+  _ _ _ _ re, al -- le -- lu -- ja, al -- le -- lu -- ja, _ _ _ al -- le -- lu -- ja, _
+  _ _ al -- le -- lu -- ja, al -- le -- lu -- ja. Qui -- a quem me -- ru -- is -- ti or -- ta -- _ re, por -- ta -- _ _ _ _ re, por -- ta -- _ _ _
+  _ re, al -- le -- lu -- ja, _ _ _ _
+  _ _ _ al -- le -- lu -- ja, _ _ _
+  _ _ _ al -- le -- lu -- _ ja, qui -- a quem me -- ru -- is -- ti or -- ta -- re, por -- ta -- _ _
+  re, por -- ta -- re, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, qui -- a quem
+  me -- ru -- is -- ti, me -- ru -- is -- ti or -- ta -- re, quem
+  me -- ru -- os -- ti or -- ta -- _ _ _ _ _
+  _ re, al -- le -- lu -- ja, al -- le -- lu -- ja, _
+  _ _ al -- le -- lu -- ja, _ _ _ al -- le -- lu -- ja, al -- le -- lu -- ja. Re -- sur -- re -- xit si -- cut di -- xit, si -- cut di -- xit, al -- le -- lu -- ja, re -- sur -- re -- xit si -- cut di -- xit, si -- cut di -- xit, al -- le -- lu -- ja, al -- le -- lu -- ja, a -- le -- lu -- ja,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, si -- cut di -- xit, al -- le -- lu -- ja, re -- sur -- re -- xit si -- cut di -- xit, si -- cut
+  di -- xit, al -- le -- lu -- ja, al -- _ _ _
+  _ _ _ _ _ _ _ _ _
+  _ _ _ _ _ _ _ le -- lu -- ja,
+  re -- sur -- re -- xit si -- cut di -- xit, si -- cut di -- xit,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja. O -- ra
+  pro no -- bis, pro no -- bis, De -- um o -- ra, o -- ra pro no -- bis, pro no -- bis De -- um, o -- ra pro no -- bis De -- um, o -- ra pro no -- bis De -- um, o -- ra pro no -- bis De -- um o -- ra pro no -- bis, De -- um, o -- _ ra pro no -- bis
+  De -- um. Al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja.
 }
 
 bassNotenReginaCaeliHaydn = \tempTranspose \relative c {
@@ -1877,7 +1855,7 @@ bassNotenReginaCaeliHaydn = \tempTranspose \relative c {
   es4 r8 g8 g8 g8 | % 124
   g4. as16 [ f16 ] g8 [ as16 f16 ] | % 125
   g4 r8 bes8 bes8 bes8 \mBreak | % 126
-  bes8 c16 [ as16 ] g4 f8. es16 | % 127
+  bes8 c16 [ as16 ] g4( f8.) es16 | % 127
   es4 r4 r4 | % 128
   R2.*4 \mPageBreak | % 132
   R2.*4 \mBreak | % 136
@@ -2068,49 +2046,24 @@ bassNotenReginaCaeliHaydn = \tempTranspose \relative c {
 }
 
 bassTextReginaCaeliHaydn = \lyricmode {
-  Re -- gi -- na coe -- li lae
-  -- ta -- "re," lae -- ta -- \skip4 \skip4 "re," lae -- ta -- "re,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," re -- gi -- na coe -- li lae -- ta --
-  "re," lae -- ta -- \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-  \skip4 \skip4 "re," al -- le -- lu -- "ja," al -- le -- lu -- "ja,"
-  \skip4 \skip4 \skip4 al -- le -- lu -- "ja," \skip4 \skip4 \skip4 al
-  -- le -- lu -- "ja," al -- le -- lu -- "ja." por -- ta -- \skip4
-  \skip4 \skip4 \skip4 "re," por -- ta -- \skip4 \skip4 \skip4 \skip4
-  "re," qui -- a quem me -- ru -- is -- ti por -- ta -- \skip4 "re,"
-  al -- le -- lu -- "ja," \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-  \skip4 \skip4 \skip4 \skip4 al -- le -- lu -- "ja," \skip4 \skip4
-  \skip4 \skip4 \skip4 \skip4 al -- le -- lu -- "ja," por -- ta --
-  "re," por -- ta -- "re," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," qui -- a quem me -- ru -- is -- "ti,"
-  quem me -- ru -- is -- ti por -- ta -- \skip4 \skip4 \skip4 \skip4
-  \skip4 "re," al -- le -- lu -- "ja," al -- le -- lu -- "ja," \skip4
-  \skip4 \skip4 al -- le -- lu -- "ja," \skip4 \skip4 \skip4 al -- le
-  -- lu -- "ja," al -- le -- \skip4 lu -- "ja." al -- le -- lu --
-  "ja," re -- sur -- re -- xit si -- cut di -- "xit," si -- cut di --
-  "xit," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le --
-  lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le
-  -- lu -- "ja," re -- sur -- re -- xit si -- cut di -- "xit," si --
-  cut di -- "xit," al -- le -- lu -- "ja," al -- le -- lu -- "ja," a
-  -- le -- lu -- "ja," re -- sur -- re -- xit si -- cut di -- "xit,"
-  si -- cut di -- "xit," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," re -- sur -- re -- xit si -- cut di -- "xit," al -- le -- lu
-  -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le --
-  lu -- "ja." o -- ra pro no -- "bis," pro no -- bis De -- um o --
-  "ra," o -- ra pro no -- "bis," pro no -- bis De -- "um," o -- "ra,"
-  o -- "ra," o -- ra pro no -- bis De -- "um," o -- ra pro no -- bis
-  De -- "um," o -- ra pro no -- bis De -- "um," o -- ra pro no -- bis
-  De -- "um," o -- "ra," o -- ra pro no -- bis De -- "um," o -- ra pro
-  no -- bis De -- "um." Al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu
-  -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le --
-  lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le
-  -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al --
-  le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al
-  -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja,"
-  al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu --
-  "ja," al -- le -- lu -- "ja," al -- le -- lu -- "ja," al -- le -- lu
-  -- "ja."
+  Re -- gi -- na coe -- li læ -- ta -- re, læ -- ta -- _ _ re, læ -- ta -- re,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, re -- gi -- na coe -- li læ -- ta -- re, læ -- ta -- _ _ _ _ _ _ _
+  _ _ re, al -- le -- lu -- ja, al -- le -- lu -- ja,
+  _ _ _ al -- le -- lu -- ja, _ _ _ al -- le -- lu -- ja, al -- le -- lu -- ja. por -- ta -- _
+  _ _ _ re, por -- ta -- _ _ _ _
+  re, qui -- a quem me -- ru -- is -- ti or -- ta -- _ re,
+  al -- le -- lu -- ja, _ _ _ _ _ _
+  _ _ _ _ al -- le -- lu -- ja, _ _
+  _ _ _ _ al -- le -- lu -- ja, por -- ta -- re, por -- ta -- re, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, qui -- a quem me -- ru -- is -- ti,
+  quem me -- ru -- is -- ti or -- ta -- _ _ _ _
+  _ re, al -- le -- lu -- ja, al -- le -- lu -- ja, _
+  _ _ al -- le -- lu -- ja, _ _ _ al -- le -- lu -- ja, al -- le -- lu -- ja. al -- le -- lu -- ja, re -- sur -- re -- xit si -- cut di -- xit, si -- cut di -- xit, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, re -- sur -- re -- xit si -- cut di -- xit, si -- cut di -- xit, al -- le -- lu -- ja, al -- le -- lu -- ja, a -- le -- lu -- ja, re -- sur -- re -- xit si -- cut di -- xit,
+  si -- cut di -- xit, al -- le -- lu -- ja, al -- le -- lu -- ja, re -- sur -- re -- xit si -- cut di -- xit, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja. o -- ra pro no -- bis, pro no -- bis De -- um o -- ra, o -- ra pro no -- bis, pro no -- bis De -- um, o -- ra,
+  o -- ra, o -- ra pro no -- bis De -- um, o -- ra pro no -- bis
+  De -- um, o -- ra pro no -- bis De -- um, o -- ra pro no -- bis
+  De -- um, o -- ra, o -- ra pro no -- bis De -- um, o -- ra pro
+  no -- bis De -- um. Al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja,
+  al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja, al -- le -- lu -- ja.
 }
 
 orgelRHNotenReginaCaeliHaydn = \tempTranspose \relative c' {
@@ -2502,10 +2455,7 @@ orgelRHNotenReginaCaeliHaydn = \tempTranspose \relative c' {
   <g bes es>4 r8 \bar "|."
 }
 
-orgelLHNotenReginaCaeliHaydn = \tempTranspose \relative c {
-  \globalReginaCaeliHaydn
 
-}
 
 continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   \globalReginaCaeliHaydn
@@ -2646,6 +2596,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   bes2. :8 \mBreak | % 136
   es,8 [ c'8 ] as4 bes4 | % 137
   es,4 r4 r4 \bar "||"
+  \tag #'einzelstimme { \pageTurn }
   \key bes \major \time 2/4 | % 138
   r8 \p bes'8 bes,4 | % 139
   r8 bes'8 bes,4 | \barNumberCheck #140
@@ -2771,6 +2722,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   d8 [ d8 es8 es8 ] | \barNumberCheck #270
   f8 [ f8 f8 f8 ] | % 271
   bes,4 r4 \bar "||"
+  
   \mPageBreak | % 272
   \key es \major \time 4/4 | % 272
   es8 \p ( [ g8 ) es8 ( g8 ) ] d8 ( [ f8 ) d8 ( f8 ) ] | % 273
@@ -2800,6 +2752,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   ces8 [ ces8 ces8 ces8 ] bes8 [ bes8 bes8 bes8 ] \mPageBreak | % 296
   a8 [ a8 a8 a8 ] bes2 ~ | % 297
   bes2 r2 ^\fermata \bar "||"
+	\tag #'einzelstimme { \pageTurn }
   \time 3/8  | % 298
   es8 \f [ g8 bes8 ] | % 299
   es8 [ es,8 ] r8 | \barNumberCheck #300
@@ -2907,15 +2860,28 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
 }
 
 bassgruppeNotenReginaCaeliHaydn = \tempTranspose \relative c {
-  \globalReginaCaeliHaydn
+  \continuoNotenReginaCaeliHaydn
+}
 
+orgelLHNotenReginaCaeliHaydn = \tempTranspose \relative c {
+  \globalReginaCaeliHaydn
+  \continuoNotenReginaCaeliHaydn
+}
+
+deutscherTextReginaCaeliHaydn = \markup {
+  \center-column {
+    \line { Freu dich, du Himmelskönigin, Halleluja. }
+    \line { Denn der, den du zu tragen würdig warst, Halleluja, }
+    \line { ist auferstanden, wie er gesagt hat, Halleluja. }
+    \line { Bitt Gott für uns, Halleluja. }
+  }
 }
 
 metronomZeileReginaCaeliHaydn = \drummode {
 }
 \include "defReginaCaeliHaydn.ly"
 
-%***Arbeitspartitur
+%{Arbeitspartitur
 #(set-global-staff-size 14)
 \book {
   \bookOutputName "ReginaCaeliHaydn-Arbeitspartitur"
@@ -2953,4 +2919,4 @@ metronomZeileReginaCaeliHaydn = \drummode {
     \scoreReginaCaeliHaydn
   }
 }
-%Arbeitspartitur***
+Arbeitspartitur%}

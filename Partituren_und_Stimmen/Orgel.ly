@@ -3,7 +3,7 @@
 
 #(set! paper-alist (cons '("Marschbuch" . (cons (* 148.5 mm) (* 120 mm)) ) paper-alist))
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 17)
 #(set-default-paper-size "a4")
 
 \include "../Noten/ReginaCaeliHaydn_Noten.ly"
@@ -61,11 +61,21 @@ tempTranspose = #(define-music-function (parser location music)
   \removeWithTag #'klavierauszug
   \removeWithTag #'midiausgabe
   \optionalTranspose { 
-    \compressFullBarRests
+    \compressEmptyMeasures
     \transpose c c \orgelsystemReginaCaeliHaydn 
   }
 }
-  \paper {
+  \paper {  
     
-  }
+    ragged-right = ##f
+    ragged-last-bottom = ##f
+    left-margin = 1.3\cm
+right-margin = 1\cm
+first-page-number = 1
+indent = 0\cm
+#(include-special-characters)
+#(define page-breaking ly:page-turn-breaking)
+
+	
+}
 }

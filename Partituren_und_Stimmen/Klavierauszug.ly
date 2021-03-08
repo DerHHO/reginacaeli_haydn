@@ -3,11 +3,11 @@
 
 #(set! paper-alist (cons '("Marschbuch" . (cons (* 148.5 mm) (* 120 mm)) ) paper-alist))
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 14)
 #(set-default-paper-size "a4")
 
 \include "../Noten/ReginaCaeliHaydn_Noten.ly"
-
+\include "../Noten/defReginaCaeliHaydn.ly"
 
 \include "../Noten/dynamicparams.ly"
 \include "../Noten/formatangaben.ly"
@@ -24,7 +24,7 @@ tempTranspose = #(define-music-function (parser location music)
                           (note (or (ly:get-option 'note) 0))
                           (alteration (or (ly:get-option 'alteration) 0))
                           (to (ly:make-pitch octave note alteration)))
-                     #{ \transpose c c  $music #})) 
+                     #{ \transpose c c  $music #}))
 
 
 
@@ -45,41 +45,61 @@ tempTranspose = #(define-music-function (parser location music)
 }
 
 \book {
-  \paper {
+  \paper {  
     
-  }
-  
+    ragged-right = ##f
+    ragged-last-bottom = ##f
+    left-margin = 1.4\cm
+right-margin = 1\cm
+tocItemMarkup = \tocItemWithDotsMarkup
+#(include-special-characters)
+
+	
+}
+
   \bookOutputName "Klavierauszug"
   \header {
     instrument = "Klavierauszug"
   }
   %%{<firstscorespacing>%} \markup { \vspace #0.5 } %{</firstscorespacing>%}
   \score {
-  \header {
-    
+    \header {
+
+    }
+    \removeWithTag #'partitur
+    \removeWithTag #'klingendepartitur
+    \removeWithTag #'transponierendepartitur
+    \removeWithTag #'klavierauszug
+    \removeWithTag #'direction
+    \removeWithTag #'chorpartitur
+    \removeWithTag #'midiausgabe
+    <<
+      \new ChoirStaff <<
+        \new Staff <<
+          \new Voice \sopranNotenReginaCaeliHaydn
+          \addlyrics \sopranTextReginaCaeliHaydn
+        >>
+        \new Staff <<
+          \new Voice {
+            \clef "bass"
+            \bassNotenReginaCaeliHaydn
+          }
+          \addlyrics \bassTextReginaCaeliHaydn
+        >>
+      >>
+      
+      \new PianoStaff <<
+        \new Staff \with { printPartCombineTexts = ##f } \partCombine \violineINotenReginaCaeliHaydn \violineIINotenReginaCaeliHaydn 
+         
+        \new Staff <<
+          \new Voice {
+            \clef "bass"
+            \continuoNotenReginaCaeliHaydn
+          }
+        >>
+      >>
+    >>
   }
-  \removeWithTag #'partitur
-  \removeWithTag #'klingendepartitur
-  \removeWithTag #'transponierendepartitur
-  \removeWithTag #'klavierauszug
-  \removeWithTag #'direction
-  \removeWithTag #'chorpartitur
-  \removeWithTag #'midiausgabe
-  \new Staff <<
-    \new Voice { 
-      \optionalTranspose { \transpose c c \ablaufzeileReginaCaeliHaydn }
-    }
-    \new Voice = "vKlavierauszug" {
-      %{<Emergency_Section>%}
-	
-      %{</Emergency_Section>%}
-      \compressFullBarRests
-      \clef "treble"
-      \optionalTranspose { \transpose c c \generic_instrumentReginaCaeliHaydn }
-    }
-    
-  >>
-}
-%{<ausgabenpagebreak></ausgabenpagebreak>%}
-  
+  %{<ausgabenpagebreak></ausgabenpagebreak>%}
+
 }

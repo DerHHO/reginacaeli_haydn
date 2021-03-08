@@ -1,52 +1,56 @@
 
 chorpartiturReginaCaeliHaydn = {
-  \new ChoirStaff <<
-    <<
-
-      \new Staff \with {
-        instrumentName = "Sopran"
-        shortInstrumentName = "S"
-        midiInstrument = "choir aahs"
-
-      }
+  <<
+    \new ChoirStaff <<
       <<
-        \new Voice = "vsop" {
-          \tag #'transponierendepartitur {
-            \clef "treble"
-            \transpose c c \sopranNotenReginaCaeliHaydn
-          }
-          \tag #'klingendepartitur {
-            \clef "treble"
-            \sopranNotenReginaCaeliHaydn
-          }
+
+        \new Staff \with {
+          instrumentName = "Sopran"
+          shortInstrumentName = "S"
+          midiInstrument = "choir aahs"
+
         }
-        \new Lyrics \lyricsto "vsop" \sopranTextReginaCaeliHaydn
-
-      >>
-
-
-      \new Staff \with {
-        instrumentName = "Bass"
-        shortInstrumentName = "B"
-        midiInstrument = "choir aahs"
-
-      }
-      <<
-        \new Voice = "vbass" {
-          \tag #'transponierendepartitur {
-            \clef "bass"
-            \transpose c c \bassNotenReginaCaeliHaydn
+        <<
+          \new Voice = "vsop" {
+            \tag #'transponierendepartitur {
+              \clef "treble"
+              \transpose c c \sopranNotenReginaCaeliHaydn
+            }
+            \tag #'klingendepartitur {
+              \clef "treble"
+              \sopranNotenReginaCaeliHaydn
+            }
           }
-          \tag #'klingendepartitur {
-            \clef "bass"
-            \bassNotenReginaCaeliHaydn
-          }
+          \new Lyrics \lyricsto "vsop" \sopranTextReginaCaeliHaydn
+
+        >>
+
+
+        \new Staff \with {
+          instrumentName = "Bass"
+          shortInstrumentName = "B"
+          midiInstrument = "choir aahs"
+
         }
-        \new Lyrics \lyricsto "vbass" \bassTextReginaCaeliHaydn
+        <<
+          \new Voice = "vbass" {
+            \tag #'transponierendepartitur {
+              \clef "bass"
+              \transpose c c \bassNotenReginaCaeliHaydn
+            }
+            \tag #'klingendepartitur {
+              \clef "bass"
+              \bassNotenReginaCaeliHaydn
+            }
+          }
+          \new Lyrics \lyricsto "vbass" \bassTextReginaCaeliHaydn
+        >>
       >>
     >>
   >>
 }
+
+
 orgelsystemReginaCaeliHaydn = {
   <<
     \new PianoStaff <<
