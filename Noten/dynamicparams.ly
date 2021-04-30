@@ -4,5 +4,11 @@
  archivNummerReginaCaeliHaydn = \markup {   }
 beistrichUntertitelReginaCaeliHaydn = \markup {", "}
 beistrichKomponistReginaCaeliHaydn = \markup { }
+violineIQRReginaCaeliHaydn = \markup {  }
+violineIIQRReginaCaeliHaydn = \markup {  }
+chorpartiturQRReginaCaeliHaydn = \markup {  }
+orgelQRReginaCaeliHaydn = \markup {  }
+continuoQRReginaCaeliHaydn = \markup {  }
 bassgruppeQRReginaCaeliHaydn = \markup {  }
+klavierauszugQRReginaCaeliHaydn = \markup {  }
 partiturQRReginaCaeliHaydn = \markup {  }

@@ -3,7 +3,7 @@
 
 #(set! paper-alist (cons '("Marschbuch" . (cons (* 148.5 mm) (* 120 mm)) ) paper-alist))
 
-#(set-global-staff-size 14)
+#(set-global-staff-size 17)
 #(set-default-paper-size "a4")
 
 \include "../Noten/ReginaCaeliHaydn_Noten.ly"

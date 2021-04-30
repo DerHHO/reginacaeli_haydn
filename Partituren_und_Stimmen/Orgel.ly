@@ -24,7 +24,7 @@ tempTranspose = #(define-music-function (parser location music)
                           (note (or (ly:get-option 'note) 0))
                           (alteration (or (ly:get-option 'alteration) 0))
                           (to (ly:make-pitch octave note alteration)))
-                     #{ \transpose c c  $music #})) 
+                     #{ \transpose c c  $music #}))
 
 
 
@@ -49,33 +49,37 @@ tempTranspose = #(define-music-function (parser location music)
   \header {
     instrument = "Orgel"
   }
-  
 
-\score {
-  \header {
-    
+
+  \score {
+    \header {
+
+    }
+    \removeWithTag #'transponierendepartitur
+    \removeWithTag #'partitur
+    \removeWithTag #'einzelstimme
+    \removeWithTag #'klavierauszug
+    \removeWithTag #'midiausgabe
+    \optionalTranspose {
+      \compressEmptyMeasures
+      \transpose c c \orgelsystemReginaCaeliHaydn
+    }
+    \layout {
+      \context {
+        \Staff
+        \override RestCollision.positioning-done = #merge-rests-on-positioning
+      }
+    }
   }
-  \removeWithTag #'transponierendepartitur
-  \removeWithTag #'partitur
-  \removeWithTag #'einzelstimme
-  \removeWithTag #'klavierauszug
-  \removeWithTag #'midiausgabe
-  \optionalTranspose { 
-    \compressEmptyMeasures
-    \transpose c c \orgelsystemReginaCaeliHaydn 
-  }
-}
-  \paper {  
-    
+  \paper {
+    page-count = 4
     ragged-right = ##f
     ragged-last-bottom = ##f
     left-margin = 1.3\cm
-right-margin = 1\cm
-first-page-number = 1
-indent = 0\cm
-#(include-special-characters)
-#(define page-breaking ly:page-turn-breaking)
-
-	
-}
+    right-margin = 1\cm
+    first-page-number = 1
+    indent = 0\cm
+    #(include-special-characters)
+    %#(define page-breaking ly:page-turn-breaking)
+  }
 }
