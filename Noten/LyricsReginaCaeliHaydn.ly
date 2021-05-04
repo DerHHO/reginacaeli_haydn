@@ -11,8 +11,8 @@ sopranTextReginaCaeliHaydn = \lyricmode {
   al -- le -- lu -- ja, al -- le -- lu -- ja.
   Qui -- a quem me -- ru -- i -- sti por -- ta -- _ re,
   por -- ta -- _ _ _ _ re, por -- ta -- _ _ _ _ re,
-  al -- le -- lu -- ja, _ _ _ _ _ _ _
-  al -- le -- lu -- ja, _ _ _ _ _ _
+  al -- le -- lu -- ja, __ _ _ _ _ _ _ _
+  al -- le -- lu -- ja, __ _ _ _ _ _ _
   al -- le -- lu -- _ ja,
   qui -- a quem me -- ru -- i -- sti por -- ta -- re,
   por -- ta -- _ _ re, por -- ta -- re,
@@ -85,8 +85,8 @@ bassTextReginaCaeliHaydn = \lyricmode {
   al -- le -- lu -- ja. por -- ta -- _ _ _ _ re,
   por -- ta -- _ _ _ _ re,
   qui -- a quem me -- ru -- i -- sti por -- ta -- _ re,
-  al -- le -- lu -- ja, _ _ _ _ _ _ _ _ _ _
-  al -- le -- lu -- ja, _ _ _ _ _ _
+  al -- le -- lu -- ja, __ _ _ _ _ _ _ _ _ _ _
+  al -- le -- lu -- ja, __ _ _ _ _ _ _
   al -- le -- lu -- ja, por -- ta -- re,
   por -- ta -- re, al -- le -- lu -- ja,
   al -- le -- lu -- ja, al -- le -- lu -- ja,

@@ -34,17 +34,18 @@ globalReginaCaeliHaydn = {
   \key ees\major
   \time 3/4
   \accidentalStyle modern-voice
+  %\set Score.tempoHideNote = ##t
 }
 
 globalPrestoIReginaCaeliHaydn = {
   \bar "||"
-  \tempo "Presto" 4 = 100
+  \tempo "Presto" 4. = 60
   \time 2/4
   \key bes\major
 }
 
 globalAdagioReginaCaeliHaydn = {
-  \tempo "Adagio" 4 = 70
+  \tempo "Adagio" 4 = 60
   \key ees\major
   \time 4/4
 }
@@ -64,6 +65,7 @@ vorspielpausenReginaCaeliHaydn = {
 \include "../Noten/LyricsReginaCaeliHaydn.ly"
 \include "../Noten/Violine1ReginaCaeliHaydn.ly"
 \include "../Noten/Violine2ReginaCaeliHaydn.ly"
+\include "../Noten/OrgelRHNotenReginaCaeliHaydn.ly"
 
 
 PartPThreeVoiceOne =  \relative es {
@@ -1079,523 +1081,7 @@ bassNotenReginaCaeliHaydn = \tempTranspose \relative c {
 
 
 
-orgelRHNotenReginaCaeliHaydn = \tempTranspose \relative c' {
-  \globalReginaCaeliHaydn
-  <g bes es>4 r4 r4 | % 2
-  <bes es g>4 <bes d f>4 r4 | % 3
-  <d f as>4 <es g>4 r4 | % 4
-  <<
-    {
-      bes'2. | % 5
-      bes2. | % 6
-      bes4 <c aes ees>8~ <d aes f> <ees bes>4 \mBreak | % 7
-      d8[ ees] d f ees4 |
-    }
-    \\
-    \relative f' {
-      <d f>4. <g es>8 [ <aes d,>8 <g ees>8 ] | % 5
-      <f as>4 <g ees>4 <aes d,>8 [ <g es>8 ] | % 7
-      <f d>4 s4 ees8 g |
-      <bes aes>8~ <bes g> <bes aes>4 <bes g>4 |
-    }
-  >>
-  c8 [ bes8 as8 g8 f8 es8 ] | % 9
-  bes'4 bes,4 r4 | \barNumberCheck #10
-  <as d f>4 r4 r4 | % 11
-  <g bes es>4 r4 r4 | % 12
-  <as d f>4 r4 r4 \mPageBreak | % 13
-  <g bes es>4 r4 r4 | % 14
-  <es' bes'>2. | % 15
-  <es as c>2. | % 16
-  <es f c'>2. \mBreak | % 17
-  <d f bes>2. | % 18
-  <<
-    \relative bes' {
-      bes4 <c ees,>4 <bes d,>4 | % 19
-    }
-    \\
-    \relative g' {
-      g8 ees f2
-    }
-  >>
-  \relative ees' {
-    <ees g bes>4 r4 r4 | \barNumberCheck #20
-    <bes es g>4 r4 r4 | % 21
-    <bes es g>4 <bes d f>4 r4 | % 22
-    <d f as>4 <es g>4 r4 \mPageBreak | % 23
-    <<
-      {
-        bes'2. |
-        bes2
-      }
-      \\
-      \relative f' {
-        <d f>4. <g es>8 [ <aes d,>8 <g ees>8 ] |
-        <f as>4 <g ees>4
-      }
-    >>
-    r4
-    <es, as c>2. | % 26
-    <es g bes>2. | % 27
-    <<
-      {
-        bes'2 as4 | % 28
-      }
-      \\
-      \relative f' {
-        <f d>2.
-      }
-    >>
 
-  }
-  \relative bes {
-    <bes es g>4 r4 r4 | % 29
-    <bes d f>4 r4 r4 \mBreak | \barNumberCheck #30
-    <d f bes>4 <c f a>4 r4 | % 31
-    <c f a>4 <d f bes>4 r4 | % 32
-    <<
-      {
-        a'4. bes8 [ c8 d8 ] | % 33
-        <es, c'>4 <d bes'>4
-      }
-      \\
-      \relative f' {
-        <f c>4. <f d>8 <a ees> <bes f>
-        f2
-      }
-    >>
-    r4 | % 34
-    <bes es g>2. | % 35
-    <bes d f>2. \mPageBreak | % 36
-    <<
-      {
-        f'2 es4 | % 37
-      }
-      \\
-      \relative ees' {
-        <c a>2. |
-      }
-    >>
-    <bes d>8 [ d8 f8 bes8 f8 d8 ] | % 38
-    <d f bes>4 r4 r4 | % 39
-    <c es a>2. | \barNumberCheck #40
-    <c es a>4 r4 r4 | % 41
-  }
-  \relative bes' {
-    <bes f d>2 <c f, c>8 <bes e, c> \mBreak | % 42
-    <a f c>2. | % 43
-    <e g bes>2. | % 44
-    <es a c>2. | % 45
-    <bes' d>4 <a c>4 <g bes>4 | % 46
-    <f a c>4 r8 f8 [ d8 bes8 ] | % 47
-    <c es a>4 r4 r4 \mPageBreak | % 48
-    <d f bes>4 r4 r4 | % 49
-    <c es a>4 r4 r4 | \barNumberCheck #50
-    <d f bes>2 <bes f' bes>4 | % 51
-    <es g bes>2 <c g' c>4 | % 52
-    <f a c>2 <d g bes>4 \mBreak | % 53
-    <c g' bes>4 <d f bes>4 <c f a>4 | % 54
-    <d f bes>2. | % 55
-    <<
-      {
-        <d bes'>4. <c a'>8 [ <d bes'>8 <c a'>8 ] | % 56
-      }
-      \\
-      \relative f' {
-        f2.
-      }
-    >>
-    <d f bes>2. | % 57
-    <<
-      {
-        <d bes'>4. <c a'>8 [ <d bes'>8 <c a'>8 ] | % 58
-      }
-      \\
-      \relative f' {
-        f2.
-      }
-    >>
-    <d f bes>2. \mPageBreak | % 59
-    <bes' f d>8 <bes g c,> <bes f d>4 <a f c> |
-    \barNumberCheck #60
-    <<
-      {
-        bes2. | % 61
-      }
-      \\
-      \relative f' {
-        <f d>4 <f bes,>2
-      }
-    >>
-    <es, g bes>2. | % 62
-    <c g' bes>2. \mBreak | % 63
-    <c es a>2. | % 64
-    <bes' g d>4 <bes g c,> <a f c>4 | % 65
-    <d, f bes>4 r8 bes'8 [ f8 d8 ] | % 66
-    <d f bes>2. | % 67
-    <es a c,>2. | % 68
-    <bes' f bes,>4 r8 <bes f bes,>8 <a ees c> <bes f d> \mPageBreak | % 69
-    <bes f d>4 <a f c> bes8 c | \barNumberCheck #70
-    <bes f d>2. | % 71
-    <a ees c>2. | % 72
-    q2. | % 73
-    <bes f d>4 bes8 [ as8 g8 f8 ] | % 74
-    <g ees bes>2. | % 75
-    <f d aes>2. \mBreak | % 76
-    <es bes>2 <g ees bes>4 | % 77
-    <g ees bes>4 <aes d, bes>2 | % 78
-    <g ees bes>2. | % 79
-    <<
-      {
-        <as aes,>2. | \barNumberCheck #80
-      }
-      \\
-      \relative ees' {
-        ees4 d2
-      }
-    >>
-    <aes d, bes>2. |
-
-    <<
-      {
-        <g bes,>2 <as c,>4 | % 82
-        <bes des,>4 <as c,>4 <g des>4 \mPageBreak | % 83
-      }
-      \\
-      \relative ees' {
-        ees2. |
-        ees2.
-      }
-    >>
-    <aes ees c>4. <g ees bes>8 <aes ees c> <g ees bes> |
-    <aes ees c>4 r r |
-    <<
-      {
-        <g ees>8 f <g ees>8 f <g ees>8 f |
-        <g ees>4 r4 r |
-        <as d,>4. <es g>8 <aes d,>8 <es g>8 ] | % 88
-        <aes d,>4 r4 <bes aes f>4 |
-        bes8 c <c ees,>4 <bes d,>
-      }
-      \\
-      \relative bes {
-        bes2.~ | % 86
-        bes4 r r |
-        bes2.~ |
-        bes4 r s |
-        <g' ees> f2 |
-      }
-    >>
-    <bes g ees>8 bes8 as8 g8 f8 es8 | % 91
-    <bes' f d>4 bes8 c8 bes8 as8  | % 92
-    <g es bes>4 r4 r4 | % 93
-    <<
-      {
-        <g ees>4 <f d>4 r4 | % 94
-        <as d,>4 <es g>4 r4 \mPageBreak | % 95
-        <bes d f>4 r4 r4 | % 96
-        <as' d,>4 <g ees>4 r4 | % 97
-      }
-      \\
-      \relative bes {
-        bes2 r4 |
-        bes2 r4 |
-        s4 r r  |
-        bes2 r4 |
-      }
-    >>
-  }
-  <es as c>2. | % 98
-  <es g bes>2. | % 99
-  <g bes>2 <f as>4 | \barNumberCheck #100
-  <es g>8 [ bes'8 as8 g8 f8 es8 ] | % 101
-  <c es as>2. | % 102
-  <es g bes>2. \mBreak | % 103
-  <g bes>2 <f as>4 | % 104
-  <es g>4 g8 [ bes8 g8 es8 ] | % 105
-  <bes g'>4 r4 r4 | % 106
-  <d f as>2. | % 107
-  <d f as>4 r4 r4 | % 108
-  g2 a4 \mPageBreak | % 109
-  <d, f bes>2. | \barNumberCheck #110
-  <c es a>2. | % 111
-  <d f as>2. | % 112
-  <es g>4 <d f>4 <c es>4 | % 113
-  <bes d>4 r8 bes'8 [ g8 es8 ] | % 114
-  <as, d f>4 r4 r4 \mBreak | % 115
-  <g bes es>4 r4 r4 | % 116
-  <as d f>4 r4 r4 | % 117
-  <bes es g>2 <es bes'>4 | % 118
-  <as c>2. | % 119
-  <f as c>4 <g bes>8 [ <f as>8 ] <es g>4 \mPageBreak | \barNumberCheck
-  #120
-  <f as>4 <es g>4 <d f>4 | % 121
-  <es g>4 bes'8 [ es8 bes8 g8 ] | % 122
-  <es g>4. <f as>8 [ <es g>8 <f as>8 ] | % 123
-  <bes, es g>4 bes'8 [ es8 bes8 g8 ] | % 124
-  <es g>4. <f as>8 [ <es g>8 <f as>8 ] | % 125
-  <es g>4 bes'8 [ es8 bes8 g8 ] \mBreak | % 126
-  <es g>8 [ <f as>8 ] <es g>4 <d f>4 | % 127
-  es8 [ bes'8 es8 bes8 g8 es8 ] | % 128
-  <as, d f>4 r4 r4 | % 129
-  <g bes es>4 r4 r4 | \barNumberCheck #130
-  <as d f>4 r4 r4 | % 131
-  <g bes es>4 r4 r4 \mPageBreak | % 132
-  <es' bes'>2. | % 133
-  <es as c>2. | % 134
-  <es f c'>2. | % 135
-  <d f bes>2. \mBreak | % 136
-  bes'8 [ c8 ] <es, c'>4 <d bes'>4 | % 137
-  <es g>4 r4 r4 \bar "||"
-  \key bes \major \time 2/4 <d bes'>4. <es a c>8 | % 139
-  <f bes d>4. <es c'>8 | \barNumberCheck #140
-  <f d'>4. <g c>8 | % 141
-  <bes d>8 [ <a c>8 ] <f bes>4 | % 142
-  R2 \mPageBreak | % 143
-  R2*2 | % 145
-  <d f bes>4 r4 | % 146
-  <es g bes>4 r4 | % 147
-  <c f a>4 r4 | % 148
-  <d f bes>2 | % 149
-  <f c'>2 | \barNumberCheck #150
-  d'4.. e16 \mBreak | % 151
-  <a, c f>2 | % 152
-  <g bes>2 | % 153
-  <f bes d>2 | % 154
-  <c' es>4 <bes d>4 | % 155
-  <f a c>4 r4 | % 156
-  <f a c>2 | % 157
-  <g bes>2 | % 158
-  <g bes>4 <f a>4 | % 159
-  <g bes>2 \mPageBreak | \barNumberCheck #160
-  <g bes>4 <f a>4 | % 161
-  bes8 [ g8 c8 ] r8 | % 162
-  bes8 [ g8 c8 ] r8 | % 163
-  bes8 [ g8 ] c4 | % 164
-  <e, g c>4 r4 | % 165
-  R2 | % 166
-  <f a c>4 r4 | % 167
-  R2 | % 168
-  <c f a>4 r4 \mBreak | % 169
-  R2*5 | % 174
-  c'4 d4 | % 175
-  <d, b'>4 <c c'>4 | % 176
-  bes'4. a8 | % 177
-  <d, g>4 <c f>4 \mPageBreak | % 178
-  bes'4 c4 | % 179
-  d4 r8 a8 | \barNumberCheck #180
-  bes4 c4 | % 181
-  <c, f a>2 | % 182
-  <c g' c>2 | % 183
-  <d f b>2 | % 184
-  <e g c>2 \mBreak | % 185
-  <f bes d>2 | % 186
-  <f c'>2 | % 187
-  <g bes e>2 | % 188
-  <a c f>4 <f d'>8 [ <e c'>8 ] | % 189
-  <f a c>4 r4 | \barNumberCheck #190
-  <a, f'>4. <bes e g>8 | % 191
-  <c f a>4. <d g bes>8 \mPageBreak | % 192
-  <f a c>4. <d g bes>8 | % 193
-  <f a>8 [ <e g>8 f8 a8 ] | % 194
-  f4 g8 [ bes8 ] | % 195
-  <e, g>4 <f a>4 | % 196
-  bes2 | % 197
-  <f a>4 r4 | % 198
-  <d f bes>4 r4 | % 199
-  <c e g>4 r4 | \barNumberCheck #200
-  <c f a>4 r4 \mBreak | % 201
-  R2*2 | % 203
-  r4 r8 as'8 | % 204
-  f4 g4 | % 205
-  <es c'>4. <d b'>8 | % 206
-  <es c'>4. <f as>8 | % 207
-  <es g>4. <d as'>8 | % 208
-  g2 \mPageBreak | % 209
-  as2 | \barNumberCheck #210
-  g2 | % 211
-  <d f>2 | % 212
-  <g, c es>4 r4 | % 213
-  <f' as c>4 r4 | % 214
-  <d g b>4 r4 | % 215
-  <es g c>2 | % 216
-  <es g c>2 \mBreak | % 217
-  <g c>2 | % 218
-  <g c>2 | % 219
-  <f a c>2 | \barNumberCheck #220
-  <es a c>2 | % 221
-  <d f bes>2 | % 222
-  <f c'>2 | % 223
-  <g bes e>2 \mPageBreak | % 224
-  <a c f>2 | % 225
-  <bes es g>2 | % 226
-  <bes f'>4 r8 <f bes d>8 | % 227
-  <a es'>4 <bes d>4 | % 228
-  <a c>4 r4 | % 229
-  <bes d>2 | \barNumberCheck #230
-  <f es'>2 | % 231
-  <c' es>4 <bes d>4 | % 232
-  <f es'>2 \mBreak | % 233
-  <c' es>4 <bes d>4 | % 234
-  f'4. r8 | % 235
-  f4. r8 | % 236
-  f2 | % 237
-  <a, c f>4 r4 | % 238
-  R2 | % 239
-  <f bes d>4 r4 | \barNumberCheck #240
-  R2 | % 241
-  <f bes d>4 r4 \mPageBreak | % 242
-  R2*5 | % 247
-  bes4. as8 | % 248
-  <es g>4 <d f>4 | % 249
-  <es a>4. <es a c>8 \mBreak | \barNumberCheck #250
-  <es a c>8 [ <d bes'>8 ] <c f a>4 | % 251
-  <bes f' bes>4 r4 | % 252
-  <es g bes>4 r4 | % 253
-  <g bes es>4 r4 | % 254
-  <es a c>4 r4 | % 255
-  <c es a>4 r4 | % 256
-  <c es g>4 r4 | % 257
-  <c es a>4 r4 | % 258
-  <d f bes>4 r8 d8 | % 259
-  es4 f4 \mPageBreak | \barNumberCheck #260
-  g4 r8 d8 | % 261
-  es4 f4 | % 262
-  <d f bes>2 | % 263
-  <f c'>2 | % 264
-  d'4.. e16 | % 265
-  <a, c f>2 \mBreak | % 266
-  <g bes>2 | % 267
-  bes2 | % 268
-  bes2 | % 269
-  bes2 | \barNumberCheck #270
-  <d, bes'>4 <c a'>4 | % 271
-  <d f bes>4 r4 \bar "||"
-  \mPageBreak | % 272
-  \key es \major \time 4/4 <es g bes>2 <f bes>2 | % 273
-  <es as>4 <d g>4 <c f>4 <bes es bes'>4 | % 274
-  <d as'>8 [ <es g>8 ] f4 <g, bes es>4 r4 \mBreak | % 275
-  <es' g bes>2 <f bes>2 | % 276
-  <es g bes>2 <es as>4 <d g>4 | % 277
-  <c f>4 <bes es>4 <c f>4 <es as c>4 \mPageBreak | % 278
-  bes'2. a4 | % 279
-  <d, f bes>2 <d g>4 <f c'>4 | \barNumberCheck #280
-  <bes es>4 <a d>4 c4. bes8 \mBreak | % 281
-  <c, a'>4 <d bes'>4 <e g c>2 | % 282
-  <as c>2 <des, f bes>2 | % 283
-  <des e bes'>2 <c f a>4 <des bes'>4 \mPageBreak | % 284
-  bes'4 a4 <d, f bes>2 | % 285
-  <c f>2 <bes es g>4 <a d a'>4 | % 286
-  <es' g c>4 <f bes>4 <es a>8 [ <d bes'>8 ] bes'8. [ a16 ] \mBreak | % 287
-  <d, f bes>4 r4 <es g bes>2 | % 288
-  bes'2. <a c>4 | % 289
-  <bes es>4 <as d>4 <g es'>4 <bes des>4 \mPageBreak |
-  \barNumberCheck #290
-  <es, c'>2 <es bes'>2 | % 291
-  as2 g4 bes4 | % 292
-  <es, as>4 <d g>4 <c f>4 <bes es g>4 \mBreak | % 293
-  <d f as>4 <es g>4 <c es a>2 | % 294
-  bes'4 as4 ges2 | % 295
-  <es ges a>2 <d f bes>2 \mPageBreak | % 296
-  <es ges c>2 <d f bes>4 <c es a>4 | % 297
-  <d f bes>2 r2 ^\fermata \bar "||"
-  \time 3/8
-  <g bes es>4. | % 299
-  <g bes es>4 r8 | \barNumberCheck #300
-  R4.*2 | % 302
-  <f bes d>4. \mBreak | % 303
-  <f bes d>4 r8 | % 304
-  R4.*2 | % 306
-  <g c>4. \p | % 307
-  c8 d4 | % 308
-  d8 es4 | % 309
-  es8 f4 | \barNumberCheck #310
-  <f, a c>4. | % 311
-  <f bes d>4. | % 312
-  <es a c>4. \mPageBreak | % 313
-  <d f bes>4. | % 314
-  <f a c>4. | % 315
-  <f bes d>4. | % 316
-  <es a c>4. | % 317
-  <d f bes>4. | % 318
-  <d f bes>8 r8 r8 | % 319
-  R4.*5 \mBreak | % 324
-  <f bes d>4. | % 325
-  <f bes d>4 r8 | % 326
-  <a c es>8 [ <bes d>8 <a c>8 ] | % 327
-  <f bes d>4. | % 328
-  <f bes d>4 r8 | % 329
-  <g c es>8 [ <f bes d>8 <es a c>8 ] | \barNumberCheck #330
-  <d f bes>4. | % 331
-  <es a>4. | % 332
-  <f as>4. | % 333
-  <es g>4. | % 334
-  a8 [ bes8 c8 ] \mPageBreak | % 335
-  bes4. | % 336
-  es,8 [ c8 f8 ] | % 337
-  bes,4 r8 | % 338
-  <d f bes>4. \f | % 339
-  <d f bes>4 r8 | \barNumberCheck #340
-  R4.*2 | % 342
-  <es a c>4. | % 343
-  <es a c>4 r8 | % 344
-  R4.*2 | % 346
-  <f d'>4 \p r8 \mBreak | % 347
-  <ges es'>4 r8 | % 348
-  <f d'>4 r8 | % 349
-  <ges es'>4 r8 | \barNumberCheck #350
-  <a c>4 r8 | % 351
-  bes8 [ bes,8 bes'8 ] | % 352
-  bes8 [ bes,8 bes'8 ] | % 353
-  as8 [ g8 f8 ] | % 354
-  <g bes es>4. | % 355
-  <g bes es>4 r8 | % 356
-  R4.*2 | % 358
-  <f bes d>4. \mPageBreak | % 359
-  <f bes d>4 r8 | \barNumberCheck #360
-  R4.*2 | % 362
-  <bes, es>4. | % 363
-  es8 f4 | % 364
-  f8 g4 | % 365
-  g8 as4 | % 366
-  as8 bes4 | % 367
-  g8 [ f8 a8 ] | % 368
-  <d, f bes>4 r8 | % 369
-  <f bes d>4. \mBreak | \barNumberCheck #370
-  <g bes es>4. | % 371
-  <f bes d>4. | % 372
-  <es g bes>4. | % 373
-  <f bes d>4. | % 374
-  <g bes es>4. | % 375
-  <f bes d>4. | % 376
-  <es g bes>4. | % 377
-  <bes es g>8 r8 r8 | % 378
-  R4.*4 \mPageBreak | % 382
-  R4. | % 383
-  r8 <g' bes>8 [ <g bes>8 ] | % 384
-  <g bes>4 r8 | % 385
-  <f as>8 [ <es g>8 <d f>8 ] | % 386
-  <es g>8 [ <bes' g'>8 <bes g'>8 ] | % 387
-  <bes g'>4 r8 | % 388
-  <f as>8 [ <es g>8 <d f>8 ] | % 389
-  <es g>8 <g bes es>4 | \barNumberCheck #390
-  <f as d>4. | % 391
-  <es bes' des>4. | % 392
-  <es c'>4. | % 393
-  <f as bes>4. \mBreak | % 394
-  <es g bes>4. | % 395
-  g8 _! [ as8 _! bes8 _! ] | % 396
-  es,4 r8 | % 397
-  es8 _. [ f8 _. g8 _. ] | % 398
-  as8 ( [ bes8 ) c8 ^. ] | % 399
-  R4.*2 | % 401
-  g8 _. [ as8 _. bes8 _. ] | % 402
-  c4 ^! r8 | % 403
-  g8 _! [ as8 _! bes8 _! ] | % 404
-  es,4 _! r8 | % 405
-  <as, d f>4 \f r8 | % 406
-  <g bes es>4 r8 \bar "|."
-}
 
 continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   \globalReginaCaeliHaydn
@@ -1737,13 +1223,12 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   es,8 [ c'8 ] as4 bes4 | % 137
   es,4 r4 r4 \bar "||"
   \tag #'einzelstimme { \pageTurn }
-  \key bes \major \time 2/4 | % 138
+  \globalPrestoIReginaCaeliHaydn
   r8 \p bes'8 bes,4 | % 139
   r8 bes'8 bes,4 | \barNumberCheck #140
   r8 bes'8 [ bes,8 es8 ] | % 141
   f8 [ es8 d8 bes8 ] | % 142
-  R2 \mPageBreak | % 143
-  R2*2 | % 145
+  R2*3 | % 145
   bes4 r4 | % 146
   es4 r4 | % 147
   f4 r4 | % 148
@@ -1756,11 +1241,11 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   a4 bes4 | % 155
   f'4 r4 | % 156
   f8 \p [ f8 a8 f8 ] | % 157
-  bes4 r4 | % 158
-  r8 f8 [ a8 f8 ] | % 159
+  c'4 r4 | % 158 urpsrünglich bes, aber vermutlich Schreibfehler
+  r8 f,8 [ a8 f8 ] | % 159
   c'4 r8 c,8 \mPageBreak | \barNumberCheck #160
   f4 r4 | % 161
-  g8 _\markup{ \bold\italic {poco} } \f [ bes8 a8 ] r8 | % 162
+  g8 _\markup{ \italic {poco} } \f [ bes8 a8 ] r8 | % 162
   g8 [ bes8 a8 ] r8 | % 163
   g8 [ bes8 a8 f8 ] | % 164
   c'4 r4 | % 165
@@ -1780,7 +1265,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   e2 :8 | % 183
   d2 :8 | % 184
   c8 [ c8 c'8 c8 ] \mBreak | % 185
-  bes2 :8 | % 186
+  bes!2 :8 | % 186
   a2 :8 | % 187
   g8 [ g8 c,8 c8 ] | % 188
   f8 [ a8 bes8 c8 ] | % 189
@@ -1819,7 +1304,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   a2 :8 | % 223
   g2 :8 \mPageBreak | % 224
   f2 :8 | % 225
-  es2 :8 | % 226
+  es!2 :8 | % 226
   d4 r8 d'8 | % 227
   c4 bes4 | % 228
   f4 r4 | % 229
@@ -1864,7 +1349,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   bes,4 r4 \bar "||"
 
   \mPageBreak | % 272
-  \key es \major \time 4/4 | % 272
+  \globalAdagioReginaCaeliHaydn
   es8 \p ( [ g8 ) es8 ( g8 ) ] d8 ( [ f8 ) d8 ( f8 ) ] | % 273
   c8 [ c'8 bes8 bes,8 ] as8 [ as'8 g8 g,8 ] | % 274
   f8 [ es8 as8 bes8 ] es,4 r4 \mBreak | % 275
@@ -1891,9 +1376,9 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   bes,8 \fp [ bes8 bes8 bes8 ] es8 [ es8 es8 es8 ] | % 295
   ces8 [ ces8 ces8 ces8 ] bes8 [ bes8 bes8 bes8 ] \mPageBreak | % 296
   a8 [ a8 a8 a8 ] bes2 ~ | % 297
-  bes2 r2 ^\fermata \bar "||"
+  bes2 r2\fermata \bar "||"
   \tag #'einzelstimme { \pageTurn }
-  \time 3/8  | % 298
+  \globalPrestoIIReginaCaeliHaydn
   es8 \f [ g8 bes8 ] | % 299
   es8 [ es,8 ] r8 | \barNumberCheck #300
   R4.*2 | % 302
@@ -1945,7 +1430,7 @@ continuoNotenReginaCaeliHaydn = \tempTranspose \relative c {
   bes4 r8 | % 351
   bes'8 \f [ bes,8 bes'8 ] | % 352
   bes8 [ bes,8 bes'8 ] | % 353
-  as8 [ g8 f8 ] | % 354
+  as!8 [ g8 f8 ] | % 354
   es8 \p [ g8 bes8 ] | % 355
   es8 [ es,8 ] r8 | % 356
   R4.*2 | % 358
@@ -2035,7 +1520,9 @@ metronomZeileReginaCaeliHaydn = \drummode {
     \scoreReginaCaeliHaydn
   }
 }
+Arbeitspartitur%}
 
+%{Arbeitspartitur
 \book {
   \bookOutputName "ReginaCaeliHaydn-midi"
   \score {

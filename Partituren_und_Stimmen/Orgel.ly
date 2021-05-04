@@ -71,15 +71,20 @@ tempTranspose = #(define-music-function (parser location music)
       }
     }
   }
-  \paper {
-    page-count = 4
+  \paper {  
+    
     ragged-right = ##f
     ragged-last-bottom = ##f
-    left-margin = 1.3\cm
-    right-margin = 1\cm
-    first-page-number = 1
-    indent = 0\cm
-    #(include-special-characters)
-    %#(define page-breaking ly:page-turn-breaking)
-  }
+    left-margin = 1\cm
+right-margin = 1\cm
+two-sided = 1
+inner-margin = 1\cm
+outer-margin = 1\cm
+first-page-number = 2
+indent = 0\cm
+#(include-special-characters)
+#(define page-breaking ly:page-turn-breaking)
+
+	
+}
 }
